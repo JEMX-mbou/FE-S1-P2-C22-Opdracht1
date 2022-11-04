@@ -1,0 +1,23 @@
+$colors: (
+  //1: ,
+  //2: ,
+  //3: ,
+  //4: ,
+  //5: 
+);
+
+$screensizes: (
+  's': 576px,
+  'm': 768px,
+  'l': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+@function screen($size: false) {
+  @if ($size) { 
+    @return map-get($screensizes, $size); 
+  } @else { 
+    @return $screensizes; 
+  }
+}
